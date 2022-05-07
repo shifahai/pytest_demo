@@ -32,4 +32,13 @@ class MyLogger(logging.Logger):
             handle2.setFormatter(formatter)
             self.addHandler(handle2)
 
+# 是否需要写入文件
+if conf.getboolean("log","file_ok"):
+    file_name = os.path.join(logs_dir,conf.get("log","file_name"))
+else:
+    file_name = None
 
+logger = MyLogger(file_name)
+
+
+# logging.info("1111111111111")

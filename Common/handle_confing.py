@@ -15,8 +15,8 @@ class  HandleConfig(ConfigParser):
         super().__init__()
         self.read(file_path,encoding="utf-8")
 
-# file_path = os.path.join(conf_dir,"nmb.ini")
-# conf = HandleConfig(file_path)
+file_path = os.path.join(conf_dir,"nmb.ini")
+conf = HandleConfig(file_path)
 
 if __name__ == '__main__':
     file_path = os.path.join(conf_dir, "nmb.ini")
