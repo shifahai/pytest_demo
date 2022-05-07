@@ -21,4 +21,4 @@ conf = HandleConfig(file_path)
 if __name__ == '__main__':
     file_path = os.path.join(conf_dir, "nmb.ini")
     conf = HandleConfig(file_path)
-    print(conf.get("log","name"))
+    print(conf.get("mysql","port"))
