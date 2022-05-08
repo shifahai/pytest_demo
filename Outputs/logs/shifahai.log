@@ -9,3 +9,75 @@
 {'member_id': '$..id', 'token': '$..token'}
 2022-05-07 16:42:56,201 Pyunitttest INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:member_id,value:200713
 2022-05-07 16:42:56,201 Pyunitttest INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwMDcxMywiZXhwIjoxNTk0MjE1MTg1fQ.9oTx_KSOwjEg4V9Ez_P6QV-3aBk3QCCFRZk3OlTnGDElkVanMLFK_H5wgI_9xolnjBNZE9TMI7e1nSOPKWj2HA
+2022-05-07 17:41:45,209 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 17:41:45,209 Pyunitttest INFO handle_requests.py-20 line: 请求头为： {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json'}
+2022-05-07 17:41:45,210 Pyunitttest INFO handle_requests.py-21 line: 请求方法为： POST
+2022-05-07 17:41:45,210 Pyunitttest INFO handle_requests.py-22 line: 请求url为： http://api.lemonban.com/futureloan/member/register
+2022-05-07 17:41:45,210 Pyunitttest INFO handle_requests.py-23 line: 请求数据为： {'mobile_phone': '18605671115', 'pwd': '123456789'}
+2022-05-07 17:41:45,324 Pyunitttest INFO handle_requests.py-29 line: 响应状态码为： 200
+2022-05-07 17:41:45,325 Pyunitttest INFO handle_requests.py-30 line: 响应数据为： {'code': 0, 'msg': 'OK', 'data': {'id': 275690, 'reg_name': '小柠檬', 'mobile_phone': '18605671115'}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-05-07 18:09:14,629 Pyunitttest INFO test_add.py-33 line: *************** 加标接口 开始测试 ***************
+2022-05-07 18:09:14,629 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': None, 'type': 'before', 'interface': 'login', 'title': '前置操作 - 管理员登陆', 'method': 'post', 'url': '/member/login', 'request_data': '{"mobile_phone":"13234825738","pwd":"123456789"}', 'extract_data': '{"admin_member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2022-05-07 18:09:14,629 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,630 Pyunitttest INFO handle_requests.py-20 line: 请求头为： {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json'}
+2022-05-07 18:09:14,630 Pyunitttest INFO handle_requests.py-21 line: 请求方法为： post
+2022-05-07 18:09:14,630 Pyunitttest INFO handle_requests.py-22 line: 请求url为： http://api.lemonban.com/futureloan/member/login
+2022-05-07 18:09:14,630 Pyunitttest INFO handle_requests.py-23 line: 请求数据为： {'mobile_phone': '13234825738', 'pwd': '123456789'}
+2022-05-07 18:09:14,795 Pyunitttest INFO handle_requests.py-29 line: 响应状态码为： 200
+2022-05-07 18:09:14,796 Pyunitttest INFO handle_requests.py-30 line: 响应数据为： {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-05-07 18:09:14,796 Pyunitttest INFO handle_extract_data_from_response.py-22 line: 要从响应结果中提取的数据集为: 
+{'admin_member_id': '$..id', 'token': '$..token'}
+2022-05-07 18:09:14,798 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 1, 'type': 'case', 'interface': 'add', 'title': '加标成功', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":0,"msg":"OK"}', 'check_sql': 'SELECT * FROM  futureloan.loan WHERE member_id=#admin_member_id#;'}
+2022-05-07 18:09:14,798 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,801 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 2, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款人id为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"用户id为空"}', 'check_sql': None}
+2022-05-07 18:09:14,801 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,801 Pyunitttest INFO handle_requests.py-20 line: 请求头为： {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json'}
+2022-05-07 18:09:14,801 Pyunitttest INFO handle_requests.py-21 line: 请求方法为： post
+2022-05-07 18:09:14,801 Pyunitttest INFO handle_requests.py-22 line: 请求url为： http://api.lemonban.com/futureloan/loan/add
+2022-05-07 18:09:14,807 Pyunitttest INFO handle_requests.py-23 line: 请求数据为： {'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5}
+2022-05-07 18:09:14,907 Pyunitttest INFO handle_requests.py-29 line: 响应状态码为： 200
+2022-05-07 18:09:14,908 Pyunitttest INFO handle_requests.py-30 line: 响应数据为： {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '未授权或token已过期'}
+2022-05-07 18:09:14,908 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 3, 'type': 'case', 'interface': 'add', 'title': '加标失败—标题为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"标题为空"}', 'check_sql': None}
+2022-05-07 18:09:14,908 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,910 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 4, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款金额为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"借款金额为空"}', 'check_sql': None}
+2022-05-07 18:09:14,910 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,912 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 5, 'type': 'case', 'interface': 'add', 'title': '加标失败—年利率为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":2000,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"利率为空"}', 'check_sql': None}
+2022-05-07 18:09:14,917 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,918 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 6, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款期限为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"借款期限为空"}', 'check_sql': None}
+2022-05-07 18:09:14,919 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,920 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 7, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款期限类型为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"借款日期类型为空"}', 'check_sql': None}
+2022-05-07 18:09:14,920 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,933 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 8, 'type': 'case', 'interface': 'add', 'title': '加标失败—竞标天数为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1}', 'extract_data': None, 'expected': '{"code":1,"msg":"竞标期限为空"}', 'check_sql': None}
+2022-05-07 18:09:14,933 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,935 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 9, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款人id不是当前登录用户', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#+1,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1007,"msg":"无权限访问，请检查参数"}', 'check_sql': None}
+2022-05-07 18:09:14,935 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,936 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 10, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款金额为负数', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":-2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":2,"msg":"借款金额范围错误"}', 'check_sql': None}
+2022-05-07 18:09:14,937 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,949 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': 11, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款金额为小数', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":#admin_member_id#,"title":"借钱实现财富自由","amount":2000.1,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":2,"msg":"借款金额范围错误"}', 'check_sql': None}
+2022-05-07 18:09:14,949 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,951 Pyunitttest INFO handle_data.py-37 line: 正则表达式替换完成之后的请求数据：
+{'case_id': None, 'type': 'before', 'interface': 'login', 'title': '前置操作 -普通用户登陆', 'method': 'post', 'url': '/member/login', 'request_data': '{"mobile_phone":"18605671115","pwd":"123456789"}', 'extract_data': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2022-05-07 18:09:14,951 Pyunitttest INFO handle_requests.py-16 line: 发送一次Http请求
+2022-05-07 18:09:14,951 Pyunitttest INFO handle_requests.py-20 line: 请求头为： {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json'}
+2022-05-07 18:09:14,951 Pyunitttest INFO handle_requests.py-21 line: 请求方法为： post
+2022-05-07 18:09:14,951 Pyunitttest INFO handle_requests.py-22 line: 请求url为： http://api.lemonban.com/futureloan/member/login
+2022-05-07 18:09:14,951 Pyunitttest INFO handle_requests.py-23 line: 请求数据为： {'mobile_phone': '18605671115', 'pwd': '123456789'}
+2022-05-07 18:09:15,064 Pyunitttest INFO handle_requests.py-29 line: 响应状态码为： 200
+2022-05-07 18:09:15,064 Pyunitttest INFO handle_requests.py-30 line: 响应数据为： {'code': 0, 'msg': 'OK', 'data': {'id': 275690, 'leave_amount': 0.0, 'mobile_phone': '18605671115', 'reg_name': '小柠檬', 'reg_time': '2022-05-07 17:41:44.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2022-05-07 18:14:14', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjI3NTY5MCwiZXhwIjoxNjUxOTE4NDU0fQ.VoJaaj8iLoMAsoivWD3uaZ6JQ8EZokCy4kzWMbcIy8Yofy0vxrRiA3kO0-O5rbKzAeASts--zhEheWGwY2DoAw'}}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-05-07 18:09:15,065 Pyunitttest INFO handle_extract_data_from_response.py-22 line: 要从响应结果中提取的数据集为: 
+{'member_id': '$..id', 'token': '$..token'}
+2022-05-07 18:09:15,065 Pyunitttest INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:member_id,value:275690
+2022-05-07 18:09:15,065 Pyunitttest INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjI3NTY5MCwiZXhwIjoxNjUxOTE4NDU0fQ.VoJaaj8iLoMAsoivWD3uaZ6JQ8EZokCy4kzWMbcIy8Yofy0vxrRiA3kO0-O5rbKzAeASts--zhEheWGwY2DoAw
+2022-05-07 18:09:15,065 Pyunitttest INFO test_add.py-40 line: *************** 加标接口 结束测试 ***************
