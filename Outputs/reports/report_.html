@@ -7159,13 +7159,13 @@ body.skin-3 {
 
 
     var resultData = {
-    "testPass": 2,
+    "testPass": 10,
     "testResult": [
         {
             "className": "TestAdd",
             "methodName": "test_add_01",
             "description": "前置操作 - 管理员登陆",
-            "spendTime": "0.169 s",
+            "spendTime": "0.0845 s",
             "status": "错误",
             "log": [
                 "13234825738\n123456789\n",
@@ -7183,7 +7183,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_02",
             "description": "加标成功",
-            "spendTime": "0.0039 s",
+            "spendTime": "0.000995 s",
             "status": "错误",
             "log": [
                 "",
@@ -7205,7 +7205,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_03",
             "description": "加标失败—借款人id为空",
-            "spendTime": "0.107 s",
+            "spendTime": "0.123 s",
             "status": "成功",
             "log": [
                 ""
@@ -7215,7 +7215,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_04",
             "description": "加标失败—标题为空",
-            "spendTime": "0.000998 s",
+            "spendTime": "0.00299 s",
             "status": "错误",
             "log": [
                 "",
@@ -7237,7 +7237,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_05",
             "description": "加标失败—借款金额为空",
-            "spendTime": "0.000998 s",
+            "spendTime": "0.00498 s",
             "status": "错误",
             "log": [
                 "",
@@ -7259,7 +7259,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_06",
             "description": "加标失败—年利率为空",
-            "spendTime": "0.00698 s",
+            "spendTime": "0.000999 s",
             "status": "错误",
             "log": [
                 "",
@@ -7281,7 +7281,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_07",
             "description": "加标失败—借款期限为空",
-            "spendTime": "0.002 s",
+            "spendTime": "0.0111 s",
             "status": "错误",
             "log": [
                 "",
@@ -7303,7 +7303,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_08",
             "description": "加标失败—借款期限类型为空",
-            "spendTime": "0.013 s",
+            "spendTime": "0.003 s",
             "status": "错误",
             "log": [
                 "",
@@ -7325,7 +7325,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_09",
             "description": "加标失败—竞标天数为空",
-            "spendTime": "0.002 s",
+            "spendTime": "0.000997 s",
             "status": "错误",
             "log": [
                 "",
@@ -7347,7 +7347,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_10",
             "description": "加标失败—借款人id不是当前登录用户",
-            "spendTime": "0.000998 s",
+            "spendTime": "0.0112 s",
             "status": "错误",
             "log": [
                 "",
@@ -7369,7 +7369,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_11",
             "description": "加标失败—借款金额为负数",
-            "spendTime": "0.013 s",
+            "spendTime": "0.00186 s",
             "status": "错误",
             "log": [
                 "",
@@ -7391,7 +7391,7 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_12",
             "description": "加标失败—借款金额为小数",
-            "spendTime": "0.000999 s",
+            "spendTime": "0.00199 s",
             "status": "错误",
             "log": [
                 "",
@@ -7413,20 +7413,250 @@ body.skin-3 {
             "className": "TestAdd",
             "methodName": "test_add_13",
             "description": "前置操作 -普通用户登陆",
-            "spendTime": "0.115 s",
+            "spendTime": "0.0784 s",
             "status": "成功",
             "log": [
                 "18605671115",
                 "123456789",
                 ""
             ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_01",
+            "description": "充值成功-整数",
+            "spendTime": "0.248 s",
+            "status": "成功",
+            "log": [
+                "275690",
+                "275690",
+                "275690",
+                "600.0",
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_02",
+            "description": "充值成功-1位小数",
+            "spendTime": "0.233 s",
+            "status": "成功",
+            "log": [
+                "275690",
+                "275690",
+                "275690",
+                "1200.1",
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_03",
+            "description": "充值成功-2位小数",
+            "spendTime": "0.259 s",
+            "status": "成功",
+            "log": [
+                "275690",
+                "275690",
+                "275690",
+                "1800.32",
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_04",
+            "description": "充值成功-50万",
+            "spendTime": "0.244 s",
+            "status": "成功",
+            "log": [
+                "275690",
+                "275690",
+                "275690",
+                "501800.32",
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_05",
+            "description": "会员id为空",
+            "spendTime": "0.0775 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_06",
+            "description": "id不是当前登录的用户",
+            "spendTime": "0.0826 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_07",
+            "description": "会员id为字符串",
+            "spendTime": "0.0864 s",
+            "status": "失败",
+            "log": [
+                "275690\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\Common\\myddt.py\", line 145, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_recharge.py\", line 97, in test_recharge\n    self.assertEqual(response.json()[\"code\"], expected[\"code\"])\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 845, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 838, in _baseAssertEqual\n    raise self.failureException(msg)\n",
+                "AssertionError: 0 != 2\n"
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_08",
+            "description": "会员id为小数",
+            "spendTime": "0.0853 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_09",
+            "description": "充值金额为0",
+            "spendTime": "0.0892 s",
+            "status": "失败",
+            "log": [
+                "275690\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\Common\\myddt.py\", line 145, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_recharge.py\", line 97, in test_recharge\n    self.assertEqual(response.json()[\"code\"], expected[\"code\"])\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 845, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 838, in _baseAssertEqual\n    raise self.failureException(msg)\n",
+                "AssertionError: 0 != 2\n"
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_10",
+            "description": "充值金额为负数",
+            "spendTime": "0.0931 s",
+            "status": "失败",
+            "log": [
+                "275690\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\Common\\myddt.py\", line 145, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_recharge.py\", line 98, in test_recharge\n    self.assertEqual(response.json()[\"msg\"], expected[\"msg\"])\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 845, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 1226, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 675, in fail\n    raise self.failureException(msg)\n",
+                "AssertionError: '余额必须大于0并且小于或者等于500000' != '金额必须大于0并且小于或者等于500000'\n- 余额必须大于0并且小于或者等于500000\n? ^\n+ 金额必须大于0并且小于或者等于500000\n? ^\n\n"
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_11",
+            "description": "充值金额为空",
+            "spendTime": "0.0821 s",
+            "status": "失败",
+            "log": [
+                "275690\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\Common\\myddt.py\", line 145, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_recharge.py\", line 97, in test_recharge\n    self.assertEqual(response.json()[\"code\"], expected[\"code\"])\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 845, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 838, in _baseAssertEqual\n    raise self.failureException(msg)\n",
+                "AssertionError: 2 != 1\n"
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_12",
+            "description": "充值金额-3位小数",
+            "spendTime": "0.0799 s",
+            "status": "失败",
+            "log": [
+                "275690\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\Common\\myddt.py\", line 145, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_recharge.py\", line 98, in test_recharge\n    self.assertEqual(response.json()[\"msg\"], expected[\"msg\"])\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 845, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 1226, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 675, in fail\n    raise self.failureException(msg)\n",
+                "AssertionError: '余额小数超过两位' != '金额小数超过两位'\n- 余额小数超过两位\n? ^\n+ 金额小数超过两位\n? ^\n\n"
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_13",
+            "description": "充值金额-大于50万",
+            "spendTime": "0.0839 s",
+            "status": "失败",
+            "log": [
+                "275690\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\Common\\myddt.py\", line 145, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_recharge.py\", line 98, in test_recharge\n    self.assertEqual(response.json()[\"msg\"], expected[\"msg\"])\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 845, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 1226, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 675, in fail\n    raise self.failureException(msg)\n",
+                "AssertionError: '余额必须大于0并且小于或者等于500000' != '金额必须大于0并且小于或者等于500000'\n- 余额必须大于0并且小于或者等于500000\n? ^\n+ 金额必须大于0并且小于或者等于500000\n? ^\n\n"
+            ]
+        },
+        {
+            "className": "TestRecharge",
+            "methodName": "test_recharge_14",
+            "description": "充值金额-非数字",
+            "spendTime": "0.0763 s",
+            "status": "成功",
+            "log": [
+                "275690",
+                ""
+            ]
+        },
+        {
+            "className": "_FailedTest",
+            "methodName": "test_register",
+            "description": null,
+            "spendTime": "0.0 s",
+            "status": "错误",
+            "log": [
+                "",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 591, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\case.py\", line 549, in _callTestMethod\n    method()\n",
+                "  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\loader.py\", line 34, in testFailure\n    raise self._exception\n",
+                "ImportError: Failed to import test module: test_register\nTraceback (most recent call last):\n  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\loader.py\", line 436, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"C:\\Program Files\\Python\\Python310\\lib\\unittest\\loader.py\", line 377, in _get_module_from_name\n    __import__(name)\n  File \"D:\\PycharmProjects\\Pyunittest\\TestCases\\test_register.py\", line 22, in <module>\n    he = HandleExcel(datas_dir,\"\\\\api_cases.xlsx\",\"注册\")\nTypeError: HandleExcel.__init__() takes 3 positional arguments but 4 were given\n\n"
+            ]
         }
     ],
     "testName": "自动化脚本",
-    "testAll": 13,
-    "testFail": 11,
-    "beginTime": "2022-05-07 18:09:14",
-    "totalTime": "1s",
+    "testAll": 28,
+    "testFail": 18,
+    "beginTime": "2022-05-08 12:00:34",
+    "totalTime": "2s",
     "testSkip": 0,
     "testError": 0
 };
