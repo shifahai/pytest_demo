@@ -1,0 +1,8 @@
+2022-06-02 16:30:07,590 Pytest_damo INFO handle_extract_data_from_response.py-22 line: 要从响应结果中提取的数据集为: 
+{'member_id': '$..id', 'token': '$..token'}
+2022-06-02 16:30:07,591 Pytest_damo INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:member_id,value:200713
+2022-06-02 16:30:07,591 Pytest_damo INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwMDcxMywiZXhwIjoxNTk0MjE1MTg1fQ.9oTx_KSOwjEg4V9Ez_P6QV-3aBk3QCCFRZk3OlTnGDElkVanMLFK_H5wgI_9xolnjBNZE9TMI7e1nSOPKWj2HA
+2022-06-02 16:39:31,764 Pytest_damo INFO handle_extract_data_from_response.py-22 line: 要从响应结果中提取的数据集为: 
+{'member_id': '$..id', 'token': '$..token'}
+2022-06-02 16:39:31,767 Pytest_damo INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:member_id,value:200713
+2022-06-02 16:39:31,767 Pytest_damo INFO handle_extract_data_from_response.py-28 line: 设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwMDcxMywiZXhwIjoxNTk0MjE1MTg1fQ.9oTx_KSOwjEg4V9Ez_P6QV-3aBk3QCCFRZk3OlTnGDElkVanMLFK_H5wgI_9xolnjBNZE9TMI7e1nSOPKWj2HA
